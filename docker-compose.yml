@@ -7,6 +7,6 @@ services:
                 ports:
                         - "80:80"
         recipe:
-                build: ./src/RecipeApplication
+                build: .
                 ports:
                         - "80"
