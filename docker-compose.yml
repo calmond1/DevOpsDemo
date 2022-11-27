@@ -7,7 +7,7 @@ services:
                 ports:
                         - "80:80"
         recipe:
-                build: .
+                build: ./src/RecipeApplication
                 ports:
                         - "80"
                 depends_on:
