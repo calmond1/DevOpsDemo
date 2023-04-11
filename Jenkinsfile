@@ -18,13 +18,13 @@ pipeline {
         }
         stage('Docker Compose Build'){
 			steps{
-				sh 'DOCKER_BUILDKIT=0 /usr/local/bin/docker-compose build'
+				sh 'DOCKER_BUILDKIT=0 /usr/bin/docker compose build'
 			}
         }
         stage('Docker Compose Up'){
 			steps{
-				sh '/usr/local/bin/docker-compose down'
-				sh '/usr/local/bin/docker-compose up -d'
+				sh '/usr/bin/docker compose down'
+				sh '/usr/bin/docker compose up -d'
 			}
         }
     }
