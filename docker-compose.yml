@@ -2,8 +2,6 @@ version: "3.8"
 services:
         nginx:
                 build: ./Nginx
-                links:
-                        - recipe:recipe
                 ports:
                         - "80:80"
         mssql:
