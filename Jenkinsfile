@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Prune Docker Data'){
             steps {
-                sh '/usr/bin/docker system prune -a -f'   
+                sh '/usr/bin/docker system prune -a -f || echo . >/dev/null'   
             }
         }
         stage('Test The Build'){
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Docker Compose Up'){
 			steps{
-				sh '/usr/bin/docker compose down'
+				sh '/usr/bin/docker compose down || echo . >/dev/null'
 				sh '/usr/bin/docker compose up -d'
 			}
         }
