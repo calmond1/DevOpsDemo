@@ -61,7 +61,7 @@ namespace RecipeApplication
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection(); // In docker, nginx will handle https
             app.UseStaticFiles();
 
             app.UseRouting();
